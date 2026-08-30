@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#020807">
+
+    <title>JARVIS AI CORE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="grid-bg"></div>
+<div id="particles"></div>
+
+<header>
+    <div class="logo">
+        <div class="logo-dot"></div>
+        <div>
+            <strong>JARVIS</strong>
+            <small>PERSONAL AI SYSTEM</small>
+        </div>
+    </div>
+
+    <div id="clock">00:00:00</div>
+</header>
+
+
+<main>
+
+    <!-- CORE -->
+
+    <section class="core-area">
+
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="ring r4"></div>
+
+        <div class="core">
+
+            <div class="core-glow"></div>
+
+            <div class="core-content">
+
+                <div class="jarvis-name">
+                    JARVIS
+                </div>
+
+                <div id="status">
+                    READY
+                </div>
+
+                <button id="micButton">
+                    <span id="micIcon">🎙</span>
+                    <span id="micText">SPEAK</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VOICE -->
+
+    <section class="panel">
+
+        <div class="panel-title">
+
+            <div>
+                <small>NEURAL VOICE INTERFACE</small>
+                <h2>Voice Command</h2>
+            </div>
+
+            <div id="micState">
+                ● MIC OFF
+            </div>
+
+        </div>
+
+
+        <div class="transcript">
+
+            <div class="transcript-head">
+                <span>LIVE TRANSCRIPT</span>
+                <span id="recognitionState">WAITING</span>
+            </div>
+
+            <div id="transcriptText">
+                Tap SPEAK and say a command...
+            </div>
+
+            <div id="wave">
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+            </div>
+
+        </div>
+
+        <div class="voice-help">
+            Example: <b>"Jarvis, open google.com"</b>
+        </div>
+
+    </section>
+
+
+    <!-- MANUAL -->
+
+    <section class="panel">
+
+        <div class="panel-title">
+            <div>
+                <small>DIRECT CONTROL</small>
+                <h2>Manual Command</h2>
+            </div>
+        </div>
+
+        <div class="input-row">
+
+            <input
+                id="commandInput"
+                type="text"
+                placeholder="Type a command here..."
+                autocomplete="off">
+
+            <button id="sendButton">
+                SEND
+            </button>
+
+        </div>
+
+        <div class="examples">
+            Try:
+            <span>open google.com</span>
+            <span>search football</span>
+            <span>what time is it</span>
+        </div>
+
+    </section>
+
+
+    <!-- SYSTEM -->
+
+    <section class="system-grid">
+
+        <div class="panel">
+
+            <small>SYSTEM TELEMETRY</small>
+
+            <div class="metric">
+                <span>VOICE CORE</span>
+                <b id="voiceCore">ONLINE</b>
+            </div>
+
+            <div class="progress">
+                <div id="voiceProgress"></div>
+            </div>
+
+
+            <div class="metric">
+                <span>NEURAL CORE</span>
+                <b id="neural">94%</b>
+            </div>
+
+            <div class="progress">
+                <div id="neuralProgress"></div>
+            </div>
+
+
+            <div class="metric">
+                <span>COMMANDS</span>
+                <b id="commandCount">0</b>
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <div class="log-title">
+                COMMAND STREAM
+
+                <button id="clearButton">
+                    CLEAR
+                </button>
+            </div>
+
+            <div id="log"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM -->
+
+    <section class="bottom">
+
+        <button id="wakeButton">
+            WAKE MODE: OFF
+        </button>
+
+        <button id="stopButton">
+            STOP MIC
+        </button>
+
+        <button id="stopVoiceButton">
+            STOP VOICE
+        </button>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
